@@ -33,6 +33,7 @@
 
 --- 04 BORDER RADIUS
     -- Default: 9px
+    -- Medium: 12px
 
 --- 05 WHITESPACE
     -- SPACING SYSTEM (px)
@@ -181,4 +182,9 @@ body {
 /* Creating space between buttons with helper class */
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+/* Whenever we'll use the strong element */
+strong {
+    font-weight: 500;
 }
