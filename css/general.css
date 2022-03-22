@@ -79,7 +79,17 @@ body {
     display: grid;
     column-gap: 6.4rem;
     row-gap: 9.6rem;
+    margin-bottom: 9.6rem;
 }
+
+.grid:last-child {
+    margin-bottom: 0;
+}
+
+/* Or we can just use */
+/* .grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+} */
 
 /* To center the grid items */
 .grid--center-v {
