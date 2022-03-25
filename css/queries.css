@@ -26,36 +26,109 @@
 /* ********************** */
 
 @media (max-width: 75em) {
-    /* 9px / 16px = 0.625 = 56.25% */
     html {
-        font-size: 56.25%;
+      /* Decrese the font size:(9px / 16px) *100  */
+      font-size: 56.25%;
     }
-
-    .main-nav-list {
-        gap: 3.2rem;
+  
+    .grid {
+      column-gap: 4.8rem;
+      row-gap: 6.4rem;
     }
-
+  
+    .heading-secondary {
+      font-size: 3.6rem;
+    }
+  
+    .heading-tertiary {
+      font-size: 2.4rem;
+    }
+  
     .header {
-        padding: 0 3.2rem;
+      padding: 0 3.2rem;
+    }
+  
+    .main-nav-list {
+      gap: 3.2rem;
+    }
+  
+    .hero {
+      gap: 4.8rem;
+    }
+  
+    .testimonials-container {
+      padding: 9.6rem 3.2rem;
+    }
+}
+
+/* 944px/16px = 59em*/
+/* ********************** */
+/* BELOW 944px (Tablets) */
+/* ********************** */
+
+@media (max-width: 59em) {
+    /* Decrese the font-size: (8px/16px) = 0.5 = 50% */
+    html {
+        font-size: 50%;
     }
 
     .hero {
-        gap: 4.8rem;
-    }
-    .grid {
-        column-gap: 4.8rem;
-        row-gap: 6.4rem ;
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
     }
 
-    .heading-secondary {
-        font-size: 3.6rem;
+    .hero-img {
+        width: 60%;
     }
 
-    .heading-tertiary {
-        font-size: 2.4rem;
+    .hero-text-box, 
+    .hero-img-box {
+        text-align: center;
     }
 
-    .testimonials-container {
-        padding: 9.6rem 3.2rem;
+    .delivered-meals {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    /* As featured in */
+    .logos img {
+        height: 2.4rem;
+    }
+
+    /* How it works */
+    .step-number {
+        font-size: 7.4rem;
+    }
+
+    /* Meal content (Meal section) */
+    .meal-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+
+    /* Testimonial section */
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    /* Form */
+    .cta {
+        /* 3/5 = 60% + 2/5 = 40% */
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sign up button */
+    .btn--form {
+        margin-top: 1.2rem;
     }
 }
