@@ -57,6 +57,9 @@ html {
     font-size: 62.5%;
     /* For mobile navigation menu animation */
     overflow-x: hidden;
+    /* Smooth scroll: For google chrome and mozila firefox */
+    /* scroll-behavior: smooth; */
+    /* It doesn't work with safari or microsoft edge*/
 }
 
 body {

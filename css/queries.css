@@ -135,6 +135,8 @@
     /* Mobile navigation */
     .btn-mobile-nav {
         display: block;
+        /* For correct focus state: Just random value 9999 or 1000 */
+        z-index: 9999; 
     }
 
     .main-nav {
