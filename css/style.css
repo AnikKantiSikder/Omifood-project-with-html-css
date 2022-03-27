@@ -76,6 +76,31 @@
     display: none;
 }
 
+/* Sticky navigation */
+.sticky .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  }
+
+/* 
+When we make the header navigation sticky, it moves out of the flow or from page completely.
+So, when header navigation jumps to sticky position, the rest of the page moves to the top,
+or takes it's height. So, if we add some margin to the top, when the header navigation jumps,
+It'll solve the problem. In this case our header navigation has a height of (9.6rem).
+*/
+.sticky .section-hero {
+    margin-top: 9.6rem;
+}
+
+
 /* ********************** */
 /* Hero section */
 /* ********************** */

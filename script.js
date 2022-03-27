@@ -35,13 +35,40 @@ allLinks.forEach(function(link){
     if (link.classList.contains('main-nav-link')){
       headerEl.classList.toggle('nav-open');
     }
-
-
-
   });
-
 });
 
+
+
+/////////////////////////////////////////////////// 
+// Sticky navigation (With intersection observer of JS)
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    // console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // Moving inside of the viewport
+    root: null,
+    // (threshold:0) means this will fire an event, as soon as 0% of the hero section is inside of the viewport
+    // We want to get an event when the hero section moves out completely of the viewport
+    threshold: 0,
+    // Because our sticky nav height is 8rem
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 
 
 
@@ -63,9 +90,6 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
-
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
-
 
 
 
